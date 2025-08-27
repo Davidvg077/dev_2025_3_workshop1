@@ -27,14 +27,15 @@ class Data:
         """
         Elimina elementos duplicados de una lista sin usar set().
         Mantiene el orden original de aparición.
-        
-        Args:
-            lista (list): Lista con posibles duplicados
-            
-        Returns:
-            list: Lista sin elementos duplicados
         """
-        pass
+        resultado = []
+        vistos = []
+        for item in lista:
+            
+            if not any(item == v and type(item) == type(v) for v in vistos):
+                resultado.append(item)
+                vistos.append(item)
+        return resultado
     
     def merge_ordenado(self, lista1, lista2):
         """
