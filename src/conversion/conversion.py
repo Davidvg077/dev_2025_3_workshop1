@@ -56,18 +56,21 @@ class Conversion:
     def romano_a_decimal(self, romano):
         """
         Convierte un número romano a decimal.
-        
-        Args:
-            romano (str): Número romano válido
-            
-        Returns:
-            int: Número decimal
-            
-        Ejemplo:
-            romano_a_decimal("IX") -> 9
-            romano_a_decimal("MCMXCIV") -> 1994
         """
-        pass
+        romanos = {
+            'I': 1, 'V': 5, 'X': 10, 'L': 50,
+            'C': 100, 'D': 500, 'M': 1000
+        }
+        total = 0
+        prev = 0
+        for c in reversed(romano):
+            valor = romanos[c]
+            if valor < prev:
+                total -= valor
+            else:
+                total += valor
+                prev = valor
+        return total
     
     def texto_a_morse(self, texto):
         """
