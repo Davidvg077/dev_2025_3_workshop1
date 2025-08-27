@@ -95,15 +95,17 @@ class Conversion:
     def morse_a_texto(self, morse):
         """
         Convierte código Morse a texto.
-        
-        Args:
-            morse (str): Código Morse separado por espacios
-            
-        Returns:
-            str: Texto decodificado
-            
-        Ejemplo:
-            morse_a_texto("... --- ...") -> "SOS"
-            morse_a_texto(".... . .-.. .-.. ---") -> "HELLO"
         """
-        pass
+        morse_dict = {
+            '.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E',
+            '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J',
+            '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O',
+            '.--.': 'P', '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T',
+            '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X', '-.--': 'Y',
+            '--..': 'Z',
+            '-----': '0', '.----': '1', '..---': '2', '...--': '3',
+            '....-': '4', '.....': '5', '-....': '6', '--...': '7',
+            '---..': '8', '----.': '9'
+        }
+        palabras = morse.strip().split(' ')
+        return ''.join(morse_dict.get(codigo, '') for codigo in palabras)
