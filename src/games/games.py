@@ -3,19 +3,28 @@ class Games:
         """
         Determina el ganador del juego piedra, papel o tijera.
         
-        Args:
-            jugador1 (str): Elección del jugador 1 ("piedra", "papel", "tijera")
-            jugador2 (str): Elección del jugador 2 ("piedra", "papel", "tijera")
-            
-        Returns:
-            str: "jugador1", "jugador2" o "empate"
-            
-        Reglas:
-            - Piedra vence a tijera
-            - Tijera vence a papel
-            - Papel vence a piedra
+        
         """
-        pass
+        validas = {"piedra", "papel", "tijera"}
+        jugador1 = jugador1.lower()
+        jugador2 = jugador2.lower()
+
+        if jugador1 not in validas or jugador2 not in validas:
+            return "invalid"
+
+        if jugador1 == jugador2:
+            return "empate"
+        
+        reglas = {
+            "piedra": "tijera",
+            "tijera": "papel",
+            "papel": "piedra"
+        }
+        
+        if reglas[jugador1] == jugador2:
+            return "jugador1"
+        else:
+            return "jugador2"
     
     def adivinar_numero_pista(self, numero_secreto, intento):
         """
