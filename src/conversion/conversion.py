@@ -24,17 +24,8 @@ class Conversion:
         """
         Convierte un número decimal a su representación binaria.
         
-        Args:
-            decimal (int): Número decimal (positivo)
-            
-        Returns:
-            str: Representación binaria como string
-            
-        Ejemplo:
-            decimal_a_binario(10) -> "1010"
-            decimal_a_binario(255) -> "11111111"
         """
-        pass
+        return bin(decimal)[2:]
     
     def binario_a_decimal(self, binario):
         """
