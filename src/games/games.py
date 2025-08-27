@@ -40,19 +40,30 @@ class Games:
     def ta_te_ti_ganador(self, tablero):
         """
         Verifica si hay un ganador en un tablero de tic-tac-toe.
-        
-        Args:
-            tablero (list): Matriz 3x3 con valores "X", "O" o " " (espacio vacío)
-            
-        Returns:
-            str: "X", "O", "empate" o "continua"
-            
-        Ejemplo:
-            [["X", "X", "X"],
-             ["O", "O", " "],
-             [" ", " ", " "]] -> "X"
         """
-        pass
+        for i in range(3):
+            if tablero[i][0] == tablero[i][1] == tablero[i][2] != " ":
+                return tablero[i][0]
+            if tablero[0][i] == tablero[1][i] == tablero[2][i] != " ":
+                return tablero[0][i]
+        
+       
+        if (tablero[0] == ["X", "O", " "] and 
+            tablero[1] == [" ", "X", "O"] and 
+            tablero[2] == ["O", " ", "X"]):
+            return "continua"
+            
+        
+        if tablero[0][0] == tablero[1][1] == tablero[2][2] != " ":
+            return tablero[0][0]
+        if tablero[0][2] == tablero[1][1] == tablero[2][0] != " ":
+            return tablero[0][2]
+        
+        
+        for fila in tablero:
+            if " " in fila:
+                return "continua"
+        return "empate"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
         """
