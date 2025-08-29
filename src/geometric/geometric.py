@@ -25,10 +25,11 @@ class Geometria:
         return 2 * (base + altura)
     
     def area_circulo(self, radio):
+
         """
         Calcula el área de un círculo.
         """
-        return 2 * math.pi * radio**2
+        return math.pi * radio**2
  
     
     def perimetro_circulo(self, radio):
