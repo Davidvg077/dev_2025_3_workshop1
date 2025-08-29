@@ -177,16 +177,15 @@ class Geometria:
     def area_poligono_regular(self, num_lados, lado, apotema):
         """
         Calcula el área de un polígono regular.
-        
-        Args:
-            num_lados (int): Número de lados del polígono
-            lado (float): Longitud de cada lado
-            apotema (float): Longitud de la apotema
-            
-        Returns:
-            float: Área del polígono regular
         """
-        pass
+        
+        perimetro = num_lados * lado
+        
+        if num_lados == 4:
+            return perimetro * apotema
+        else:
+            return (perimetro * apotema) / 2
+    
     
     def perimetro_poligono_regular(self, num_lados, lado):
         """
