@@ -79,15 +79,9 @@ class Geometria:
     def area_hexagono_regular(self, lado, apotema):
         """
         Calcula el área de un hexágono regular.
-        
-        Args:
-            lado (float): Longitud del lado del hexágono
-            apotema (float): Longitud de la apotema (distancia del centro al punto medio de un lado)
-            
-        Returns:
-            float: Área del hexágono regular
         """
-        pass
+        perimetro = 6 * lado
+        return (perimetro * apotema) / 2
     
     def perimetro_hexagono_regular(self, lado):
         """
