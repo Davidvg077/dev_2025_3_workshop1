@@ -1,4 +1,12 @@
+import math
+from math import pi 
+
+
+
 class Geometria:
+
+
+
     """
     Class with geometric exercises.
     Include basic and funny operations in 2D and 3D.
@@ -20,7 +28,8 @@ class Geometria:
         """
         Calcula el área de un círculo.
         """
-        return math.pi * radio**2
+        return 2 * math.pi * radio**2
+ 
     
     def perimetro_circulo(self, radio):
         """
@@ -98,14 +107,8 @@ class Geometria:
     def area_superficie_cubo(self, lado):
         """
         Calcula el área de la superficie de un cubo.
-        
-        Args:
-            lado (float): Longitud del lado del cubo
-            
-        Returns:
-            float: Área de la superficie del cubo
         """
-        pass
+        return 6 * lado**2
     
     def volumen_esfera(self, radio):
         """
