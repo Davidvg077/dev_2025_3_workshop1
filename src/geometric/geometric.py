@@ -53,16 +53,9 @@ class Geometria:
     def area_trapecio(self, base_mayor, base_menor, altura):
         """
         Calcula el área de un trapecio.
-        
-        Args:
-            base_mayor (float): Longitud de la base mayor
-            base_menor (float): Longitud de la base menor
-            altura (float): Altura del trapecio
-            
-        Returns:
-            float: Área del trapecio
         """
-        pass
+        return ((base_mayor + base_menor) /2)*altura
+    
     
     def area_rombo(self, diagonal_mayor, diagonal_menor):
         """
