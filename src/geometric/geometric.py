@@ -113,14 +113,8 @@ class Geometria:
     def volumen_esfera(self, radio):
         """
         Calcula el volumen de una esfera.
-        
-        Args:
-            radio (float): Radio de la esfera
-            
-        Returns:
-            float: Volumen de la esfera
         """
-        pass
+        return (4/3) * math.pi * (radio ** 3)
     
     def area_superficie_esfera(self, radio):
         """
