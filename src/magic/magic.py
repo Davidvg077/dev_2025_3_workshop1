@@ -52,14 +52,8 @@ class Magic:
     def generar_primos(self, n):
         """
         Genera una lista de números primos hasta n.
-        
-        Args:
-            n (int): Límite superior para generar primos
-            
-        Returns:
-            list: Lista de números primos hasta n
         """
-        pass
+        return [i for i in range(2, n + 1) if self.es_primo(i)]
     
     def es_numero_perfecto(self, n):
         """
