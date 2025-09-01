@@ -103,15 +103,10 @@ class Magic:
     def mcm(self, a, b):
         """
         Calcula el mínimo común múltiplo de dos números.
-        
-        Args:
-            a (int): Primer número
-            b (int): Segundo número
-            
-        Returns:
-            int: El mínimo común múltiplo de a y b
         """
-        pass
+        if a == 0 or b == 0:
+            return 0
+        return abs(a * b) // self.mcd(a, b)
     
     def suma_digitos(self, n):
         """
