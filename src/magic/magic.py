@@ -58,14 +58,16 @@ class Magic:
     def es_numero_perfecto(self, n):
         """
         Verifica si un número es perfecto (igual a la suma de sus divisores propios).
-        
-        Args:
-            n (int): Número a verificar
-            
-        Returns:
-            bool: True si n es un número perfecto, False en caso contrario
         """
-        pass
+        if n < 2:
+            return False
+        suma_divisores = 1
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                suma_divisores += i
+                if i != n // i:
+                    suma_divisores += n // i
+        return suma_divisores == n
     
     def triangulo_pascal(self, filas):
         """
