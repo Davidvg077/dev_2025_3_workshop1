@@ -44,15 +44,8 @@ class Logica:
     def XNOR(self, a, b):
         """
         Implementa la operación lógica XNOR (NOT XOR).
-        
-        Args:
-            a (bool): Primer valor booleano
-            b (bool): Segundo valor booleano
-            
-        Returns:
-            bool: Resultado de a XNOR b
         """
-        pass
+        return not (a != b)
     
     def implicacion(self, a, b):
         """
