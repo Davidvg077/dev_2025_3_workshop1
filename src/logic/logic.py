@@ -31,15 +31,9 @@ class Logica:
     def NAND(self, a, b):
         """
         Implementa la operación lógica NAND (NOT AND).
-        
-        Args:
-            a (bool): Primer valor booleano
-            b (bool): Segundo valor booleano
-            
-        Returns:
-            bool: Resultado de a NAND b
+
         """
-        pass
+        return not (a and b)
     
     def NOR(self, a, b):
         """
