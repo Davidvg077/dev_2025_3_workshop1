@@ -24,13 +24,13 @@ class Magic:
         """
         Genera los primeros n números de la secuencia de Fibonacci.
         
-        Args:
-            n (int): Cantidad de números a generar
-            
-        Returns:
-            list: Lista con los primeros n números de Fibonacci
         """
-        pass
+        if n <= 0:
+            return []
+        secuencia = [0, 1]
+        while len(secuencia) < n:
+            secuencia.append(secuencia[-1] + secuencia[-2])
+        return secuencia[:n]
     
     def es_primo(self, n):
         """
