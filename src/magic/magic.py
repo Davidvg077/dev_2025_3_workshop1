@@ -72,14 +72,14 @@ class Magic:
     def triangulo_pascal(self, filas):
         """
         Genera las primeras n filas del triángulo de Pascal.
-        
-        Args:
-            filas (int): Número de filas a generar
-            
-        Returns:
-            list: Lista de listas que representa el triángulo de Pascal
         """
-        pass
+        triangulo = []
+        for i in range(filas):
+            fila = [1] * (i + 1)
+            for j in range(1, i):
+                fila[j] = triangulo[i - 1][j - 1] + triangulo[i - 1][j]
+            triangulo.append(fila)
+        return triangulo
     
     def factorial(self, n):
         """
