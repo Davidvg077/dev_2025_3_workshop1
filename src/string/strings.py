@@ -7,14 +7,9 @@ class Strings:
     def es_palindromo(self, texto):
         """
         Verifica si una cadena es un palíndromo (se lee igual de izquierda a derecha y viceversa).
-        
-        Args:
-            texto (str): Cadena a verificar
-            
-        Returns:
-            bool: True si es palíndromo, False en caso contrario
         """
-        pass
+        texto = "".join(c.lower() for c in texto if c.isalnum())
+        return texto == texto[::-1]
     
     def invertir_cadena(self, texto):
         """
