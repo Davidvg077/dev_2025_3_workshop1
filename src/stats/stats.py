@@ -15,34 +15,29 @@ class Stats:
         """
         Encuentra el valor mediano de una lista de números.
         Para listas con número par de elementos, retorna el promedio de los dos valores centrales.
-        
-        Args:
-            numeros (list): Lista de números
-            
-        Returns:
-            float: El valor mediano
-            
-        Ejemplo:
-            mediana([1, 2, 3, 4, 5]) -> 3.0
-            mediana([1, 2, 3, 4]) -> 2.5
         """
-        pass
+        if not numeros:
+            return 0
+        nums = sorted(numeros)
+        n = len(nums)
+        mid = n // 2
+        if n % 2 == 0:
+            return (nums[mid - 1] + nums[mid]) / 2
+        else:
+            return nums[mid]
     
     def moda(self, numeros):
         """
         Encuentra el valor que aparece con mayor frecuencia en la lista.
         Si hay empate, retorna el primer valor encontrado.
-        
-        Args:
-            numeros (list): Lista de números
-            
-        Returns:
-            number: El valor más frecuente
-            
-        Ejemplo:
-            moda([1, 2, 2, 3, 3, 3]) -> 3
         """
-        pass
+        if not numeros:
+            return None
+        contador = Counter(numeros)
+        max_frec = max(contador.values())
+        for num in numeros:
+            if contador[num] == max_frec:
+                return num
     
     def desviacion_estandar(self, numeros):
         """
