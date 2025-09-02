@@ -14,14 +14,11 @@ class Strings:
     def invertir_cadena(self, texto):
         """
         Invierte una cadena de texto sin usar slicing ni reversed().
-        
-        Args:
-            texto (str): Cadena a invertir
-            
-        Returns:
-            str: Cadena invertida
         """
-        pass
+        invertida = ""
+        for c in texto:
+            invertida = c + invertida
+        return invertida
     
     def contar_vocales(self, texto):
         """
