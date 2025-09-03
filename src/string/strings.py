@@ -85,14 +85,16 @@ class Strings:
         """
         Aplica el cifrado César a una cadena de texto.
         
-        Args:
-            texto (str): Cadena a cifrar
-            desplazamiento (int): Número de posiciones a desplazar cada letra
-            
-        Returns:
-            str: Cadena cifrada
         """
-        pass
+        resultado = ""
+        for c in texto:
+            if c.isalpha():
+                base = ord('A') if c.isupper() else ord('a')
+                resultado += chr((ord(c) - base + desplazamiento) % 26 + base)
+            else:
+                resultado += c
+        return resultado
+
     
     def descifrar_cesar(self, texto, desplazamiento):
         """
