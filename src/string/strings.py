@@ -51,14 +51,13 @@ class Strings:
     def palabras_mayus(self, texto):
         """
         Pon en Mayuscula la primera letra de cada palabra en una cadena.
-        
-        Args:
-            texto (str): Cadena
-            
-        Returns:
-            str: Cadena con la primera letra de cada palabra en mayúscula
         """
-        pass
+        words = texto.split()
+        result = texto
+        for word in words:
+            capitalized = word.capitalize()
+            result = result.replace(word, capitalized)
+        return result
     
     def eliminar_espacios_duplicados(self, texto):
         """
