@@ -45,14 +45,8 @@ class Strings:
     def contar_palabras(self, texto):
         """
         Cuenta el número de palabras en una cadena.
-        
-        Args:
-            texto (str): Cadena para contar palabras
-            
-        Returns:
-            int: Número de palabras en la cadena
         """
-        pass
+        return len([p for p in texto.split(" ") if p.strip() != ""])
     
     def palabras_mayus(self, texto):
         """
