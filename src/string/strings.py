@@ -37,15 +37,10 @@ class Strings:
     def es_anagrama(self, texto1, texto2):
         """
         Verifica si dos cadenas son anagramas (contienen exactamente los mismos caracteres).
-        
-        Args:
-            texto1 (str): Primera cadena
-            texto2 (str): Segunda cadena
-            
-        Returns:
-            bool: True si son anagramas, False en caso contrario
         """
-        pass
+        t1 = sorted(c.lower() for c in texto1 if c.isalnum())
+        t2 = sorted(c.lower() for c in texto2 if c.isalnum())
+        return t1 == t2
     
     def contar_palabras(self, texto):
         """
