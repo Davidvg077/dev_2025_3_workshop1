@@ -62,14 +62,15 @@ class Strings:
     def eliminar_espacios_duplicados(self, texto):
         """
         Elimina espacios duplicados en una cadena.
-        
-        Args:
-            texto (str): Cadena con posibles espacios duplicados
-            
-        Returns:
-            str: Cadena sin espacios duplicados
         """
-        pass
+        has_leading_space = texto.startswith(' ')
+        has_trailing_space = texto.endswith(' ')
+        cleaned = " ".join(texto.split())
+        if has_leading_space:
+            cleaned = ' ' + cleaned
+        if has_trailing_space:
+            cleaned = cleaned + ' '
+        return cleaned
     
     def es_numero_entero(self, texto):
         """
