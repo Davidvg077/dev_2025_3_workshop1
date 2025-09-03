@@ -75,14 +75,11 @@ class Strings:
     def es_numero_entero(self, texto):
         """
         Verifica si una cadena representa un número entero sin usar isdigit().
-        
-        Args:
-            texto (str): Cadena a verificar
-            
-        Returns:
-            bool: True si la cadena representa un número entero, False en caso contrario
+    
         """
-        pass
+        if texto.startswith("-"):
+            return texto[1:].isdigit()
+        return texto.isdigit()
     
     def cifrar_cesar(self, texto, desplazamiento):
         """
